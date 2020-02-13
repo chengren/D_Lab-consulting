@@ -1,0 +1,337 @@
+---
+title: "Demo"
+author: "Cheng Ren and revised based on Evan Muzzall's markdown file"
+date: "2/5/2020"
+output:
+  html_document: default
+  pdf_document: default
+---
+This is an [.HTML](https://html.com/) file generated using [Rmarkdown (.Rmd)](http://rmarkdown.rstudio.com/). Click these hyperlinks and those throughout this document to learn more. 
+
+Be sure to install both R and RStudio for these exercises:  
+[Click here to download R(Current Version 3.6.2)](https://www.r-project.org/)  
+[Click here to download RStudio](https://www.rstudio.com/products/rstudio/download/)
+
+
+# learning objectives: 
+* Navigating RStudio  
+* Data types and type coercion  
+* Data structures (vectors, factors, and data frames)  
+* Changing column names in a data frame
+* The `$` operator
+* Load the GSS data subset .CSV file
+* Summary/Crosstable
+* Graph data
+* Resources
+* Appendix
+
+## Navigating RStudio
+RStudio is a dynamic [graphical user interface (GUI)](https://www.computerhope.com/jargon/g/gui.htm) that wraps around the R language. You will notice that it is separated into various window panes. RStudio makes it easy to save your code in a [**script.**](https://dzone.com/articles/how-to-write-r-script-explained-with-an-awesome-ex)  
+
+To change the color of your background, click **Tools => Global Options => Appearance => Editor theme.** You will probably also want to "soft wrap" your code so that when you type it "wraps" to a new line - you can do this by clicking **Tools => Global Options => Code => check box "Soft wrap R source files.**  
+
+To open a new script file, click **File => New File => R Script.** By default this will appear in the upper-left pane. Here you can write code to save variables, import datasets, write comments to yourself, and summarize, visualize, and test data. By default, your output will appear in the lower-left pane called the [**console.**](https://support.rstudio.com/hc/en-us/articles/200404846-Working-in-the-Console)  
+
+Variables you define are automatically saved into your [**global environment**](http://adv-r.had.co.nz/Environments.html) - this is physical space tasked with storing the variables you define. This is located in the upper-right pane.  
+
+The lower-right pane contains miscellaneous output. Here you will find your file structure, help pages, plots, and a package installation interface.  
+
+## Saving variables 
+To [save a variable](https://www.datacamp.com/courses/free-introduction-to-r) in RStudio, you need three things:  
+1) unique name - if your variable name is the same as a previously defined one, it will overwrite it!  
+2) the assignment operator <-  
+3) a definition/statements to be evaluated - the code you want to run  
+
+The syntax looks like this: `unique_name <- definition`, and you read this like "the object unique_name is defined as 'definition'".  
+
+Run a line of code by pressing **command + return (Mac)** or **Ctrl + return (Windows).** Try it!  
+```{r}
+my_name <- "Type your name here!" # this is character/text/string data
+
+X <- 5 # R defaults to numeric type, even for whole numbers! 
+```
+
+What happened here? Notice that in the global environment (the upper right hand pane), two variables are now defined: "name" and "X".  
+
+
+## Data types and type coercion
+R can store many different [data types](https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/).  
+The most common ones are:  
+1) **numeric:** decimals and fractions  
+2) **integer:** positive and negative whole numbers, including zero  
+3) **character:** aka text or string data  
+4) **logical:** `TRUE` or `FALSE`  
+5) **factor:** categorical groupings of integer or character data  
+
+You can investigate data types using the `class()` function.
+```{r}
+class(my_name)
+class(X)
+```
+
+#### Data type coercion
+Notice that "X" is defined as numeric type even though it is an integer! We can change ("coerce") its type using the `as.integer()` function: 
+```{r}
+X_char <- as.character(X)
+class(X_char)
+```
+
+## Data structures
+## Vectors
+Vectors are central to R and are defined as organized groupings of the same type of data. This means that their position matters!  
+
+So far, we have only been saving one piece of data into our variables. We can use the `c()` funciton to save more than one piece of data, as long as it is all of the same type! Let's try it: 
+```{r}
+fruit <- c("Apple", "Apple", "Apple", "Apple", 
+           "Orange", "Orange", "Orange",
+           "Strawberry", "Strawberry", "Strawberry")
+fruit
+class(fruit)
+```
+
+Note that we never refer to a vector merely as a vector! We always refer to it by its type: character vector, integer vector, logical vector, and so on.  
+
+See these [examples for generating sequences of numbers](http://uc-r.github.io/generating_sequence_numbers/).  
+
+## Factors
+Factors are categorical groupings of data that can be used to make comparisons between other data.  
+
+For example, what if a variable named "price" contains the cost of each of these fruits and we want to investigate differences in cost between fruits? Let's store this information in a character vector: 
+```{r}
+price <- c(0.79, 0.79, 0.79, 0.79, # price of apples
+           0.99, 0.99, 0.99, # oranges
+           0.59, 0.59, 0.59) # strawberries
+price
+class(price)
+```
+
+Unfortunately, it is difficult to make comparisons of the prices if we keep the "fruit" vector as character type. However, if we coerce it to factor type, R knows that it should group the like fruits by name.  
+
+Similar to type coercion above, we can convert "fruit" from character to factor type using the `as.factor()` function: 
+```{r}
+fruit_fac <- as.factor(fruit)
+fruit_fac
+class(fruit_fac)
+```
+
+What changed? We can then view the factor levels via the `levels()` function:
+```{r}
+levels(fruit_fac)
+```
+
+Get more [help with factors](https://www.stat.berkeley.edu/classes/s133/factors.html)  by clicking the link! 
+
+## Data frames
+A major strength of R is that it can store data in a "data frame". This allows you to combine vectors of equal length into a dataset that can be operated upon. The best way to think of this is to think of a basic spreadsheet! 
+
+```{r}
+fruit_prices <- data.frame(fruit, price)
+fruit_prices
+class(fruit_prices)
+```
+## Changing column names in a data frame
+So far, we have only manipulated the right side of our equation! However, we can change the column names of "fruit_prices" by manipulating the left side, and then defining a character vector of length equal to our number of columns. What changed?
+```{r}
+colnames(fruit_prices)
+colnames(fruit_prices) <- c("FRUIT", "PRICE")
+head(fruit_prices)
+```
+
+## Load the GSS data subset from file with `read.csv()`
+Remember to set your working directory first by clicking **Session => Set Working Directory => Choose Directory** and choose the "csv file" folder.
+
+```{r}
+#To check Whether you are in the Working directory
+setwd('/Users/cheng/Downloads')
+getwd()
+#if you have readly in the working directory, you can just read the file
+gss <- read.csv("gss_sub.csv", header = T)
+?read.csv()
+# Or, you can just type the absolute file path into `read.csv()`
+gss <- read.csv("/Users/cheng/Downloads/gss_sub.csv", header = T)
+#Please be aware it is "/" not "\", if you copy from the file, the address is "\" like"\OneDrive\Desktop"
+```
+
+Inspect the data frame
+```{r}
+str(gss)
+dim(gss)
+head(gss)
+```
+
+## Identifying missing data (`NA`)
+Missing data are especially problematic in all data science endeavors as identifying missing data is a fundamental step in data preparation. In R, you can identify missing data with the `is.na()` function. Let's just look at the "HEALTH" column. R recognizes missing data only as `NA`.  
+
+`TRUE` means data are missing; `FALSE` means data are present. 
+```{r, eval = FALSE}
+is.na(gss$HEALTH)
+```
+
+If we want to see sum how many cells have missing data within a vector, we can wrap this in the `sum()` or `table()` function: 
+```{r}
+sum(is.na(gss$HEALTH)) # the HEALTH column has 16,445 cells with missing data
+table(is.na(gss$HEALTH))# what is the difference?
+```
+If we want see the missing situation of each column
+```{r}
+colSums(is.na(gss))
+round(colSums(is.na(gss))/nrow(gss)*100,2)
+```
+## Summarizing your data
+Summarizing data are a fundamental step in the analytical process, often even before visualization. You want to quickly produce some descriptive statistics since they can inform what you should consider choosing for your visualizations.  
+
+The `summary()` and `table()` functions are great places to start: 
+```{r}
+table(gss$HEALTH) # this will compute frequencies for factor variables
+gss$HEALTH<-factor(gss$HEALTH, levels=c('EXCELLENT' ,'GOOD' ,'FAIR','POOR'))# change the levels(orders) of the variable
+table(gss$HEALTH) # compare the difference between the original one
+summary(gss$CONINC) # this will produce six number summaries for numeric variables
+```
+
+```{r}
+aggregate(gss$CONINC, by = list(gss$HEALTH),summary)
+aggregate(gss$CONINC, by = list(gss$HEALTH),mean)
+#Please think for a while why it returns NAs
+aggregate(gss$CONINC, by = list(gss$HEALTH),mean,na.rm=TRUE)
+```
+
+Cross Table [supoprt file](http://rstudio-pubs-static.s3.amazonaws.com/6975_c4943349b6174f448104a5513fed59a9.html)
+```{r}
+gss$DEGREE<-factor(gss$DEGREE, levels=c("GRADUATE","BACHELOR","JUNIOR COLLEGE","HIGH SCHOOL","LT HIGH SCHOOL"))#change the levels of degree
+m<-table(gss$DEGREE,gss$FAMILY16)
+m
+```
+```{r}
+round(prop.table(m,1),4)*100
+round(prop.table(m,2),4)*100
+```
+
+Correcltion is a statistical relationship,it commonly refers to the degree to which a pair of variables are linearly related. The range of correcltion is [-1,1] and negative means negative relationship and vice versa.
+
+```{r}
+cor.test(gss$EDUC,gss$PAEDUC,use = "complete.obs")
+```
+
+Alternative way
+<br>glm is used to fit generalized linear models, specified by giving a symbolic description of the linear predictor and a description of the error distribution.
+```{r}
+model<-glm(EDUC~PAEDUC,gss,family ="gaussian" )# if family="binomial", then glm become logit regression
+summary(model)
+```
+
+## ggplot2 GSS visualizations (layers, data, aes, and geom_)
+While base plotting functions `hist()`, `plot()`, and `boxplot()` (not covered in this lesson) are useful for fast visualizations, they get a bit clunky in more complex operations. However, check out the help pages to learn more. 
+```{r}
+?hist
+?plot
+?boxplot
+hist(gss$CONINC)
+```
+
+What this means is that you create a base layer that contains information about your data, definitions for your coordinate system, and how colors and point shapes should be mapped to variables in your dataset. Then, each time you add something new (a title, new axis label, theme, etc.) it gets its own layer and is superimposed on top of the base layer and any previous layers.  
+
+See this [awesome ggplot2 tutorial](http://www.sthda.com/english/wiki/ggplot2-essentials) for clear, in-depth walkthroughs!  
+
+The package is called "ggplot2", but the actual function to create a plot is `ggplot()` and requires three things:  
+1) data  
+2) "aes"thetics (this is where you define the coordinate system, define point colors and shapes, etc)  
+3) "geom_"s (this is how you choose your data to be represented - points, lines, bars, ribbons, etc.)  
+
+We will walk through a histogram, boxplot, and scatterplot.  
+
+**Histogram** - look at the distribution of the CONINC variable
+
+```{r}
+library(ggplot2)
+ggplot(data = gss, aes(x = CONINC)) + 
+  geom_histogram(fill = "orange", color = "black", bins = 50) + 
+  ggtitle("Histogram of CONINC") + 
+  scale_x_continuous(breaks = pretty(gss$CONINC, n = 20)) + 
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+**Saving your figures** - in the "Plots" viewer (lower right pane), click Export, then either:  
+* Save as image,  
+* Save as PDF, or
+* Copy to Clipboard
+
+Specify your options and then save it! Where do you think it is saved to? (hint: your working directory!)  
+
+**Boxplots** - again, let's look at the distribution of the CONINC variable but this time as as parsed by the different levels of HEALTH. 
+
+Notice that we have included the `fill = HEALTH` argument inside `aes()`. This will color the boxes by the different levels of HEALTH (EXCELLENT, FAIR, GOOD, POOR). If this is too redundant, you can turn the legend off by deleting the two hashtags in the code below:
+```{r}
+ggplot(data = gss, aes(x = HEALTH, y = CONINC, fill = HEALTH)) + 
+  geom_boxplot() + 
+  theme_minimal() + 
+  scale_x_discrete(limits = c("POOR", "FAIR", "GOOD", "EXCELLENT", "NA")) + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ylab("CONINC") # + 
+  # guides(fill = FALSE)
+```
+
+**Scatterplots** - are super fun in ggplot2. What do these different argument layers do? What might this scatterplot inform you about? 
+```{r}
+# Scatterplot 1 - father's education
+ggplot(data = gss, aes(x = PAEDUC, y = EDUC)) + 
+  geom_point(color = "blue") + 
+  theme_light() + 
+  ggtitle("Scatterplot of PAEDUC v EDUC") + 
+  xlab("PAEDUC") + 
+  ylab("EDUC") + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_x_continuous(breaks = pretty(gss$PAEDUC, n = 20)) + 
+  scale_y_continuous(breaks = seq(0, 20, by = 1))
+
+# Points work well, but we want geom_jitter() instead!
+ggplot(data = gss, aes(x = PAEDUC, y = EDUC)) + 
+  geom_jitter(color = "orange") + 
+  geom_smooth(method=lm)+
+  theme_light() + 
+  ggtitle("Scatterplot of PAEDUC v EDUC") + 
+  xlab("PAEDUC") + 
+  ylab("EDUC") + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_x_continuous(breaks = pretty(gss$PAEDUC, n = 20)) + 
+  scale_y_continuous(breaks = seq(0, 20, by = 1))
+```
+
+**barplots** - you can also use barplots to create histogram-like plots using proportions (%) instead of actual numbers
+```{r}
+# by percentage (%)
+ggplot(gss, aes(x = MARITAL, fill = MARITAL)) + 
+  geom_bar(aes(y = (..count..)/sum(..count..))) + 
+  scale_x_discrete(limits = c("MARRIED", "SEPARATED", "DIVORCED", "WIDOWED", "NEVER MARRIED")) + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ylab("%") +
+  guides(fill = FALSE)
+
+# stacked percentage plot
+ggplot(gss, aes(x = MARITAL)) + 
+  geom_bar(aes(fill = SEX), position = "fill") + 
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ylab("%") + 
+  scale_x_discrete(limits = c("MARRIED", "SEPARATED", "DIVORCED", "WIDOWED", "NEVER MARRIED")) 
+```
+
+
+## Appendix
+The useful guideance of tidy census is https://walkerke.github.io/tidycensus/articles/basic-usage.html
+<br>Before run this, you need to apply a cnesus API key. The website is https://www.census.gov/data/developers/guidance/api-user-guide.html
+```{r}
+#install.packages("tidycensus")
+library(tidycensus)
+Y18 <- load_variables(2018, "acs5", cache = TRUE)
+head(Y18)
+```
+```{r}
+ca <- get_acs(geography = "county", 
+              variables = c(medincome = "B19013_001"), 
+              state = "CA", 
+              year = 2018)
+
+ca
+```
