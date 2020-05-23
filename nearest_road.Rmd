@@ -1,0 +1,26 @@
+---
+title: "Nearest road"
+author: "Cheng Ren"
+date: "3/11/2020"
+output: html_document
+---
+
+```{r}
+library(osrm)
+library(osrmr)
+```
+
+
+```{r}
+a <- c(47.054790,-21.574597)
+b <- c( 47.062576,-21.573601)
+osrmRoute(src =a ,dst = b,overview = FALSE )
+```
+
+![image](C:/Users/cheng/OneDrive/Desktop/capture1.png)
+
+```{r}
+nearest(-21.574597, 47.054790, api_version = 5, localhost = F, timeout = 0.1)
+```
+
+![image](C:/Users/cheng/OneDrive/Desktop/capture2.png)
