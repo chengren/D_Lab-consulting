@@ -1,0 +1,101 @@
+hire_FI,edu,pol_view,inc,race,gender,inc_diff,personl_inc,doc_law,opin_sdSc,conf_cjs,cj_tough,blk_eqTr,cj_drug,opin_cjSc,narr_type,narr
+1,Some College,conservative,"40,000-49,999",White,Female,Agree,Disagree,Agree,0,Some,About Right,Agree,Both,0,bad_influence,1
+1,High School,Moderate,"20,000-29,999",White,Male,Disagree,Disagree,Disagree,0,Some,Not tough enough,Disagree,Both,0,bad_influence,1
+1,Some College,conservative,"70,000-79,999",White,Male,Agree,Agree,Neutral,0,A lot,Not tough enough,Disagree,Criminal Offense,0,bad_influence,1
+1,High School,conservative,"50,000-59,999",White,Male,Disagree,Agree,Disagree,0,None,Too Tough,Disagree,Addiction,0,bad_influence,1
+1,High School,Undecided,"30,000-39,999",White,Female,Neutral,Agree,Agree,0,Some,Not tough enough,Disagree,Both,0,bad_influence,1
+1,Bachelor,Liberal,"80,000-99,999",White,Female,Agree,Agree,Agree,0,A lot,About Right,Agree,Addiction,0,bad_influence,1
+1,Bachelor,conservative,"60,000-69,999",White,Male,Agree,Agree,Agree,0,Some,Too Tough,Agree,Addiction,0,bad_influence,1
+1,Some College,Liberal,"50,000-59,999",White,Female,Disagree,Agree,Disagree,0,Some,Too Tough,Disagree,Addiction,0,bad_influence,1
+1,Some College,Moderate,"40,000-49,999",White,Male,Agree,Disagree,Agree,0,Some,No opinion,Agree,Addiction,0,bad_influence,1
+1,High School,Moderate,"30,000-39,999",White,Male,Neutral,Agree,Agree,0,A lot,Too Tough,Disagree,Addiction,0,bad_influence,1
+1,Some College,Liberal,"80,000-99,999",Black,Male,Agree,Disagree,Agree,0,Some,Not tough enough,Agree,Both,0,bad_influence,1
+1,High School,conservative,"70,000-79,999",White,Female,Disagree,Agree,Disagree,0,Some,About Right,Disagree,Addiction,0,bad_influence,1
+1,Bachelor,Liberal,"60,000-69,999",Other,Female,Agree,Disagree,Agree,0,Some,Not tough enough,Disagree,Addiction,0,bad_influence,1
+0,High School,conservative,"20,000-29,999",White,Female,Neutral,Agree,Neutral,0,None,Too Tough,Disagree,Addiction,0,bad_influence,1
+0,High School,conservative,"30,000-39,999",White,Female,Disagree,Disagree,Agree,0,Some,Too Tough,Agree,Both,0,bad_influence,1
+0,Some College,Liberal,"50,000-59,999",White,Male,Agree,Agree,Agree,0,Some,Too Tough,Disagree,Addiction,0,bad_influence,1
+0,Some College,Liberal,"30,000-39,999",White,Male,Disagree,Agree,Disagree,0,None,Too Tough,Disagree,Addiction,0,bad_influence,1
+0,High School,conservative,"30,000-39,999",White,Female,Disagree,Agree,Agree,0,A lot,About Right,Agree,Both,0,bad_influence,1
+0,Some College,conservative,"50,000-59,999",Other,Female,Agree,Disagree,Agree,0,Some,No opinion,Disagree,Both,0,bad_influence,1
+1,High School,conservative,"70,000-79,999",White,Female,Agree,Disagree,Agree,0,A lot,Too Tough,Disagree,Both,0,econ_motivation,1
+1,Some College,conservative,"70,000-79,999",White,Female,Disagree,Disagree,Agree,0,Some,Not tough enough,Agree,Addiction,0,econ_motivation,1
+1,Some College,Liberal,"100,000-129,999",Black,Male,Neutral,Disagree,Agree,0,Some,Not tough enough,Agree,Both,0,econ_motivation,1
+1,High School,Liberal,"40,000-49,999",Other,Female,Agree,Agree,Agree,0,Some,About Right,Disagree,Addiction,0,econ_motivation,1
+1,High School,Liberal,"50,000-59,999",White,Female,Neutral,Agree,Neutral,0,Some,Too Tough,Disagree,Both,0,econ_motivation,1
+1,Some College,Liberal,"20,000-29,999",Other,Male,Agree,Agree,Disagree,0,None,Too Tough,Disagree,Both,0,econ_motivation,1
+1,Some College,conservative,"100,000-129,999",White,Male,Neutral,Disagree,Agree,0,Some,No opinion,Disagree,Both,0,econ_motivation,1
+1,High School,Moderate,"20,000-29,999",Black,Male,Disagree,Agree,Agree,0,None,Too Tough,Disagree,Addiction,0,econ_motivation,1
+1,Bachelor,conservative,"100,000-129,999",White,Male,Disagree,Agree,Agree,0,Some,Not tough enough,Agree,Both,0,econ_motivation,1
+1,High School,Liberal,"20,000-29,999",Other,Male,Agree,Agree,Disagree,0,None,Too Tough,Disagree,Both,0,econ_motivation,1
+0,Some College,Moderate,"70,000-79,999",White,Male,Disagree,Disagree,Agree,0,Some,About Right,Disagree,Addiction,0,econ_motivation,1
+0,Some College,Liberal,"40,000-49,999",White,Female,Disagree,Neutral,Disagree,0,Some,Too Tough,Disagree,Addiction,0,econ_motivation,1
+0,High School,Liberal,"20,000-29,999",Other,Male,Disagree,Agree,Agree,0,Some,Too Tough,Disagree,Addiction,0,econ_motivation,1
+0,High School,Liberal,"50,000-59,999",White,Male,Agree,Agree,Agree,0,Some,About Right,Agree,Neither,0,econ_motivation,1
+0,Some College,Moderate,"20,000-29,999",Other,Female,Neutral,Disagree,Agree,0,Some,About Right,Agree,Addiction,0,econ_motivation,1
+0,Some College,conservative,"80,000-99,999",White,Female,Agree,Neutral,Agree,0,A lot,Not tough enough,No Answer,Addiction,0,econ_motivation,1
+0,High School,conservative,"30,000-39,999",White,Male,Neutral,Disagree,Agree,0,A lot,About Right,Agree,Both,0,econ_motivation,1
+0,Some College,Moderate,"20,000-29,999",White,Female,Neutral,Neutral,Agree,0,None,Too Tough,Disagree,Addiction,0,econ_motivation,1
+0,High School,Liberal,"80,000-99,999",White,Female,Agree,Disagree,Agree,0,None,Too Tough,Disagree,Addiction,0,econ_motivation,1
+0,Some College,conservative,"80,000-99,999",White,Male,Agree,Disagree,Disagree,0,None,Not tough enough,Disagree,Both,0,econ_motivation,1
+1,Some College,Liberal,"30,000-39,999",White,Male,Disagree,Agree,Agree,0,None,Too Tough,Disagree,Both,0,textbook_addiction,1
+1,Bachelor,Liberal,"80,000-99,999",White,Female,Disagree,Agree,Agree,0,Some,Too Tough,Disagree,Addiction,0,textbook_addiction,1
+1,Bachelor,Moderate,"20,000-29,999",White,Female,Agree,Disagree,Agree,0,Some,About Right,Agree,Both,0,textbook_addiction,1
+1,Bachelor,conservative,"100,000-129,999",White,Female,Agree,Disagree,Agree,0,A lot,Not tough enough,Disagree,Addiction,0,textbook_addiction,1
+1,High School,Liberal,"20,000-29,999",Black,Male,Agree,Agree,Agree,0,Some,Too Tough,Disagree,Both,0,textbook_addiction,1
+1,High School,conservative,"20,000-29,999",White,Female,Agree,Agree,Neutral,0,None,Too Tough,No Answer,Addiction,0,textbook_addiction,1
+1,Some College,Liberal,"20,000-29,999",White,Male,Disagree,Agree,Agree,0,Some,Too Tough,Disagree,Addiction,0,textbook_addiction,1
+1,Some College,conservative,"50,000-59,999",White,Female,Neutral,Neutral,Agree,0,A lot,About Right,Agree,Both,0,textbook_addiction,1
+1,Some College,Liberal,"50,000-59,999",White,Female,Disagree,Agree,Agree,0,Some,About Right,Disagree,Addiction,0,textbook_addiction,1
+1,Some College,conservative,"30,000-39,999",White,Male,Agree,Agree,Disagree,0,A lot,About Right,Disagree,Both,0,textbook_addiction,1
+1,Some College,Moderate,"30,000-39,999",White,Female,Neutral,Neutral,Disagree,0,Some,Not tough enough,Agree,Both,0,textbook_addiction,1
+1,High School,Moderate,"30,000-39,999",White,Female,Disagree,Agree,Disagree,0,None,Too Tough,Disagree,Addiction,0,textbook_addiction,1
+0,Some College,conservative,"50,000-59,999",White,Male,Neutral,Disagree,Agree,0,Some,About Right,Agree,Both,0,textbook_addiction,1
+0,Bachelor,Liberal,"50,000-59,999",White,Female,Disagree,Agree,Disagree,0,Some,Too Tough,Disagree,Addiction,0,textbook_addiction,1
+0,Some College,Moderate,"20,000-29,999",White,Female,Disagree,Agree,Agree,0,Some,Too Tough,Disagree,Addiction,0,textbook_addiction,1
+0,Some College,conservative,"70,000-79,999",White,Male,Agree,Agree,Agree,0,Some,Too Tough,Agree,Addiction,0,textbook_addiction,1
+0,High School,conservative,"80,000-99,999",White,Male,Agree,Disagree,Agree,0,Some,About Right,Disagree,Addiction,0,textbook_addiction,1
+0,Some College,Liberal,"60,000-69,999",Other,Male,Neutral,Agree,Disagree,0,Some,Too Tough,Disagree,Addiction,0,textbook_addiction,1
+1,Some College,Liberal,"20,000-29,999",Other,Male,Agree,Agree,Agree,0,Some,No opinion,Disagree,No Opinion,0,wronged_by_syst,1
+1,Some College,Moderate,"100,000-129,999",White,Male,Agree,Agree,Agree,0,Some,Too Tough,Disagree,Addiction,0,wronged_by_syst,1
+1,Some College,Liberal,"20,000-29,999",White,Male,Disagree,Agree,Disagree,0,None,No opinion,Disagree,Addiction,0,wronged_by_syst,1
+1,Some College,Liberal,"50,000-59,999",White,Male,Agree,Disagree,Agree,0,Some,Not tough enough,Disagree,Addiction,0,wronged_by_syst,1
+1,High School,Liberal,"70,000-79,999",White,Male,Agree,Agree,Neutral,0,Some,About Right,Disagree,Addiction,0,wronged_by_syst,1
+1,High School,Liberal,"30,000-39,999",White,Female,Neutral,Agree,Agree,0,Some,No opinion,Agree,Addiction,0,wronged_by_syst,1
+1,Some College,Liberal,"30,000-39,999",White,Male,Agree,Disagree,Agree,0,Some,Too Tough,Disagree,Addiction,0,wronged_by_syst,1
+1,Some College,conservative,"50,000-59,999",White,Male,Agree,Disagree,Disagree,0,Some,About Right,Agree,Criminal Offense,0,wronged_by_syst,1
+1,Some College,conservative,"60,000-69,999",White,Male,Agree,Agree,Disagree,0,Some,About Right,Agree,Addiction,0,wronged_by_syst,1
+1,Some College,Moderate,"60,000-69,999",White,Female,Agree,Disagree,Agree,0,Some,About Right,Agree,Addiction,0,wronged_by_syst,1
+1,Bachelor,Liberal,"60,000-69,999",White,Male,Disagree,Neutral,Agree,0,A lot,About Right,Disagree,Addiction,0,wronged_by_syst,1
+1,Some College,conservative,"70,000-79,999",White,Male,Disagree,Disagree,Agree,0,Some,About Right,Agree,Both,0,wronged_by_syst,1
+1,Some College,Liberal,"30,000-39,999",White,Female,Neutral,Agree,Disagree,0,Some,Too Tough,Disagree,Addiction,0,wronged_by_syst,1
+1,High School,Liberal,"60,000-69,999",White,Female,Disagree,Agree,Agree,0,Some,Not tough enough,Disagree,Addiction,0,wronged_by_syst,1
+1,Some College,conservative,"40,000-49,999",Other,Male,Neutral,Disagree,Disagree,0,None,Too Tough,Agree,Addiction,0,wronged_by_syst,1
+1,Some College,Liberal,"20,000-29,999",Other,Female,Neutral,Neutral,Neutral,0,Some,No opinion,No Answer,No Opinion,0,wronged_by_syst,1
+1,Some College,Liberal,"40,000-49,999",White,Male,Agree,Disagree,Agree,0,None,About Right,Disagree,Both,0,wronged_by_syst,1
+0,Some College,Liberal,"60,000-69,999",White,Female,Disagree,Neutral,Neutral,0,Some,No opinion,Disagree,Addiction,0,wronged_by_syst,1
+0,High School,Liberal,"80,000-99,999",White,Male,Neutral,Agree,Agree,0,Some,No opinion,Disagree,Addiction,0,wronged_by_syst,1
+0,Some College,Liberal,"60,000-69,999",Other,Female,Disagree,Agree,Agree,0,Some,Too Tough,Disagree,Both,0,wronged_by_syst,1
+0,Some College,Moderate,"40,000-49,999",White,Female,Disagree,Agree,Disagree,0,None,Too Tough,Disagree,Both,0,wronged_by_syst,1
+0,Bachelor,conservative,"80,000-99,999",White,Male,Agree,Agree,Agree,0,A lot,About Right,Agree,Addiction,0,wronged_by_syst,1
+1,High School,Liberal,"20,000-29,999",White,Male,Disagree,Disagree,Agree,0,Some,No opinion,Disagree,Both,0,no_narr,0
+1,High School,Liberal,"20,000-29,999",White,Male,Disagree,Agree,Disagree,0,None,Too Tough,Disagree,Addiction,0,no_narr,0
+1,Some College,Liberal,"60,000-69,999",White,Male,Agree,Agree,Agree,0,Some,Not tough enough,Disagree,Both,0,no_narr,0
+1,Some College,conservative,"80,000-99,999",White,Male,Disagree,Disagree,Agree,0,A lot,Not tough enough,Disagree,Addiction,0,no_narr,0
+1,Some College,Liberal,"50,000-59,999",Black,Male,Agree,Agree,Disagree,0,Some,Not tough enough,Disagree,No Opinion,0,no_narr,0
+1,Some College,Liberal,"60,000-69,999",White,Female,Agree,Agree,Agree,0,None,Not tough enough,Disagree,Neither,0,no_narr,0
+1,Some College,Moderate,"20,000-29,999",White,Male,Neutral,Neutral,Agree,0,Some,Not tough enough,Disagree,No Opinion,0,no_narr,0
+1,High School,Liberal,"20,000-29,999",White,Male,Disagree,Agree,Agree,0,Some,Too Tough,Disagree,Addiction,0,no_narr,0
+1,Some College,Liberal,"80,000-99,999",White,Female,Agree,Neutral,Agree,0,Some,Too Tough,Disagree,Addiction,0,no_narr,0
+1,Some College,Liberal,"30,000-39,999",White,Male,Disagree,Agree,Neutral,0,Some,About Right,Disagree,Addiction,0,no_narr,0
+1,Some College,Liberal,"30,000-39,999",White,Male,Agree,Disagree,Agree,0,Some,Too Tough,Agree,Addiction,0,no_narr,0
+1,High School,conservative,"80,000-99,999",White,Female,Agree,Agree,Agree,0,Some,About Right,Agree,Both,0,no_narr,0
+0,Some College,Moderate,"80,000-99,999",Black,Male,Disagree,Neutral,Disagree,0,None,No opinion,Disagree,Addiction,0,no_narr,0
+0,Some College,Liberal,"50,000-59,999",White,Female,Neutral,Neutral,Agree,0,Some,Not tough enough,Disagree,Both,0,no_narr,0
+0,Bachelor,Moderate,"20,000-29,999",Other,Male,Agree,Neutral,Agree,0,Some,Not tough enough,Disagree,Both,0,no_narr,0
+0,Some College,conservative,"100,000-129,999",White,Male,Agree,Agree,Agree,0,A lot,Too Tough,Agree,Addiction,0,no_narr,0
+0,Some College,Liberal,"70,000-79,999",White,Female,Neutral,Agree,Agree,0,Some,Too Tough,Disagree,Addiction,0,no_narr,0
+0,High School,Liberal,"30,000-39,999",White,Male,Neutral,Neutral,Neutral,0,Some,No opinion,Disagree,Both,0,no_narr,0
+0,Some College,conservative,"20,000-29,999",Black,Female,Neutral,Agree,Neutral,0,Some,No opinion,Disagree,No Opinion,0,no_narr,0
+0,High School,Moderate,"50,000-59,999",Other,Female,Agree,Disagree,Agree,0,None,Not tough enough,Disagree,Addiction,0,no_narr,0
+0,Some College,conservative,"80,000-99,999",White,Male,Agree,Agree,Agree,0,A lot,About Right,Agree,Both,0,no_narr,0
